@@ -1,6 +1,11 @@
 <h1>List of all brigades</h1>
 
 <% @brigades.each do |brigade| %>
-  <h2><%= brigade.name %></h2>
-  <p><%= brigade.description %></p>
+  <div class="brigade">
+    <h2><%= brigade.name %></h2>
+    <p><%= brigade.description %></p>
+    <%= link_to 'Edit', [:edit, brigade] %>
+  </div>
 <% end %>
+
+<%= link_to 'New brigade', new_brigade_path %>
