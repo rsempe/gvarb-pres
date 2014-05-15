@@ -1,4 +1,4 @@
-<h1>List of all brigades</h1>
+<h1>Ruby Brigades</h1>
 
 <% @brigades.each do |brigade| %>
   <div class="brigade">
@@ -8,4 +8,6 @@
   </div>
 <% end %>
 
-<%= link_to 'New brigade', new_brigade_path %>
+<div class="actions">
+  <%= link_to 'New brigade', new_brigade_path, class: 'new-brigade' %>
+</div>

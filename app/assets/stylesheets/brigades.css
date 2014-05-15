@@ -1,4 +1,18 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+body {
+  width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.brigade {
+  background-color: #EEE;
+}
+
+.actions {
+  margin-top: 10px;
+  text-align: right;
+}
