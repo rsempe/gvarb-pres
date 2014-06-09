@@ -8,6 +8,9 @@
   </head>
 
   <body>
+    <%= link_to 'EN', url_for(locale: 'en') %> |
+    <%= link_to 'FR', url_for(locale: 'fr') %> |
+    <%= link_to 'IT', url_for(locale: 'it') %>
     <%= yield %>
   </body>
 </html>
