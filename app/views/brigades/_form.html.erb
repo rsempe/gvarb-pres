@@ -1,4 +1,4 @@
-<%= form_for(@brigade) do |f| %>
+<%= form_for(@brigade, html: { class: 'basic-grey' }) do |f| %>
   <% if @brigade.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@brigade.errors.count, "error") %> prohibited this brigade from being saved:</h2>
