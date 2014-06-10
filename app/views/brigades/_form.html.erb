@@ -11,15 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+  <% I18n.available_locales.each do |locale| %>
+    <h2><%= locale.upcase %> translation:</h2>
 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+    <div class="field">
+      <%= f.label "name_#{locale}", 'Name' %><br>
+      <%= f.text_field "name_#{locale}" %>
+    </div>
+
+    <div class="field">
+      <%= f.label "description_#{locale}", 'Description' %><br>
+      <%= f.text_area "description_#{locale}" %>
+    </div>
+
+    <hr />
+  <% end %>
 
   <div class="actions">
     <%= f.submit %>

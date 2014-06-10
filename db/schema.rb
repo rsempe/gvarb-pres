@@ -15,12 +15,18 @@ ActiveRecord::Schema.define(version: 20140515200235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "brigades", force: true do |t|
     t.string   "name"
     t.text     "description"
+    t.hstore   "name_translations"
+    t.hstore   "description_translations"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "brigades", ["description_translations"], name: "index_brigades_on_description_translations", using: :gin
+  add_index "brigades", ["name_translations"], name: "index_brigades_on_name_translations", using: :gin
 
 end

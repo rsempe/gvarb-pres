@@ -20,6 +20,7 @@ class BrigadesController < ApplicationController
   end
 
   def edit
+    @brigade.disable_fallback
   end
 
   def update
